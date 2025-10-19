@@ -23,5 +23,5 @@ export class HomePage{
 
     async openShoppingCart(){
         await this.page.click(this.locators.shoppingCartBtn);
-    }
-}
+    };
+};

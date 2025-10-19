@@ -6,7 +6,7 @@ export interface RegisterData {
     lastName: string;
     email: string;
     password: string
-}
+};
 
 export class RegisterForm{
     constructor(private page: Page){}
@@ -32,8 +32,8 @@ export class RegisterForm{
         };
         if(data.password.length<6){
             throw new Error("Password must be at least 6 characters")
-        }
-    }
+        };
+    };
 
     async registerNewUser(data:RegisterData){
         await this.validateRegisterData(data)
@@ -52,6 +52,4 @@ export class RegisterForm{
         await this.page.click(this.locators.registerBtn);
         await this.page.click(this.locators.continueBtn);
     };
-
-
-}
+};
