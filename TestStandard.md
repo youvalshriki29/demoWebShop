@@ -11,21 +11,22 @@ This test helps confirm the registration and shopping flow works as expected.
 ## Step to execute
 |step|action                                     |expected result                    |
 |----|-------------------------------------------|-----------------------------------|
-|1   |open website                               |website open successfully          |
-|2   |click on register button                   |register form open                 |
-|3   |enter valid details in the required field: |there is no errors                 |
+|1   |open the website                           |website opened successfully        |
+|2   |click on the register button               |register form opened               |
+|3   |enter valid details in the required field: |no validation errors are displayed |
 |    |firstName,lastName,email,gender,password,  |                                   |
 |    |confirm password                           |                                   |
 |4   |click on register button                   |registration completed successfully|
-|5   |click on continue button                   |home page open                     |
+|5   |click on continue button                   |home page opened                   |
 |6   |validate that the email used for login is  |email is displayed correctly       |
 |    |displayed in the header                    |                                   |
-|7   |click on digital downloads                 |digital downloads page open        |
-|8   |pick random product and click on add to    |the product added to cart          |
+|7   |click on digital downloads                 |digital downloads page opened      |
+|8   |select a random product and click on add   |                                   |
+     |to the product added to cart               |                                   |
 |    |cart button                                |                                   |
-|9   |click on shopping cart button              |shopping cart page open            |
+|9   |click on shopping cart button              |shopping cart page opened          |
 |10  |validate that the product name displayed   |the products are matching          |
-|    | match the one we choosen                  |                                   |
+|    | match the one that was selected           |                                   |
 
 ## PostConditions
 - Log out the user
