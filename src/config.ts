@@ -1,5 +1,4 @@
 import { RegisterData } from './pages/components/registerForm'
-export const BASE_URL = `https://demowebshop.tricentis.com/`;
 export const TEST_USER : RegisterData = {
     gender: 'female' as const,
     firstName: 'yuval',

@@ -1,17 +1,16 @@
 import { test } from '@playwright/test';
-import { HomePage } from '../src/pages/homePage';
-import { BASE_URL, TEST_USER } from '../src/config';
-import { RegisterForm, DigitalDownloads, ShoppingCart } from '../src/pages/components';
+import { TEST_USER } from '../src/config';
+import { RegisterForm, DigitalDownloads, ShoppingCart, HomePage } from '@pages';
 
 test('Register new user and add random product to cart =>', async ({ page }) => {
   const homePage = new HomePage(page);
   const registerForm = new RegisterForm(page);
   const digitalDownloads = new DigitalDownloads(page);
   const shoppingCart = new ShoppingCart(page);
-  let productName = '';
+  let productName: string;
 
   await test.step('Navigate to home page', async () =>{
-    await page.goto(BASE_URL);
+    await page.goto('/');
   });
 
   await test.step('Open register form', async () =>{

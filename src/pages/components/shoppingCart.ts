@@ -1,12 +1,16 @@
-import { Page, expect} from '@playwright/test'
+import { Locator, Page, expect} from '@playwright/test'
 
 export class ShoppingCart {
-    constructor(private page: Page) {}
     private static readonly locators = {
         productName: `.product-name`
     };
+    private productName: Locator
 
-    async validateProductInCart(productAddedToCart:string) {
-       await expect(this.page.locator(ShoppingCart.locators.productName)).toHaveText(productAddedToCart);
+    constructor(page: Page) {
+        this.productName = page.locator(ShoppingCart.locators.productName)
+    };
+
+    async validateProductInCart(productAddedToCart:string): Promise<void> {
+       await expect(this.productName).toHaveText(productAddedToCart);
     };
 };
